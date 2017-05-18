@@ -12,15 +12,6 @@
 
 @interface SBNotificationCenterViewController
 -(void)updatePage:(CGPoint)arg1;
--(BOOL)isGrabberLocked;
-@end
-
-@interface SBModeViewController
--(NSArray *)viewControllers;
-@end
-
-@interface SBNotificationCenterLayoutViewController
--(SBModeViewController *)modeViewController;
 @end
 
 @interface SBPagedScrollView : UIScrollView
