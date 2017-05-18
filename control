@@ -1,7 +1,7 @@
 Package: com.dgh0st.centerobey
 Name: CenterObey
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: NC and CC will obey based on finger position.
 Maintainer: DGh0st <deeppwnage@yahoo.com>

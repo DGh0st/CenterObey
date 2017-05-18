@@ -8,6 +8,7 @@
 
 @interface SBControlCenterController
 -(void)updatePage:(CGPoint)arg1;
+-(BOOL)isFullyRevealed;
 @end
 
 @interface SBNotificationCenterViewController
@@ -25,7 +26,7 @@ SBPagedScrollView *pageScrollView = nil;
 
 %hook SBControlCenterController
 -(CGFloat)_controlCenterHeightForTouchLocation:(CGPoint)arg1 initialTouchLocation:(CGPoint)arg2 {
-	if (arg2.y > [[%c(UIScreen) mainScreen] bounds].size.height * 9 / 10)
+	if (arg2.y > [[%c(UIScreen) mainScreen] bounds].size.height * 9 / 10 && ![self isFullyRevealed])
 		[self updatePage:arg1];
 	return %orig(arg1, arg2);
 }
